@@ -1,18 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './Home';
-import About from './About';
-import Navbar from './components/Navbar';
-import { Route, Routes } from 'react-router-dom';
+import logo from "./logo.svg";
+import "./App.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Product from "./components/Product/Product";
+import AllRoutes from "./routes/allRoutes";
 
 function App() {
+  document.querySelector("body")?.classList.add("app");
   return (
-    <div className="App">
+    <div className="container">
+      <BrowserRouter>
       <Navbar/>
-      <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-            </Routes>
+        <AllRoutes />
+      </BrowserRouter>
     </div>
   );
 }

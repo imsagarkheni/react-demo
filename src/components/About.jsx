@@ -1,10 +1,10 @@
 import React, { useState,useEffect } from 'react';
-import Modal from './Modal';
-import AboutPopup from './AboutPopup';
+import Modal from './PopUps/Modal';
+import AboutPopup from '../components/PopUps/AboutPopup';
 import axios from 'axios';
 
 const About = () => {
-    const [isVideoPlayerPopUpOpen, setIsVideoPlayerPopUpOpen] = useState(false);
+    const [aboutPopUp, setAboutPopUp] = useState(false);
     const [data, setData] = useState([])
     const getData = async ()=>{
         try {
@@ -16,17 +16,17 @@ const About = () => {
     }
     useEffect(() => {
 		getData();
-	}, [isVideoPlayerPopUpOpen]);
+	}, []);
 
     return (
         <div>
             <button className='btn btn-primary' onClick={() => {
-                setIsVideoPlayerPopUpOpen(true)
+                setAboutPopUp(true)
             }}>
-                Modal Open
+                About Modal Open
             </button>
-            <Modal isOpen={isVideoPlayerPopUpOpen}>
-                <AboutPopup handleClose={setIsVideoPlayerPopUpOpen} data={data}  />
+            <Modal isOpen={aboutPopUp}>
+                <AboutPopup handleClose={setAboutPopUp} data={data}  />
             </Modal>
         </div>
     )

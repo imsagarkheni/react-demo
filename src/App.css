@@ -12,6 +12,15 @@
   z-index: 1000; /* Ensure the popup appears above other content */
 }
 
+.icon-star:before {
+  content: "\e90b";
+  color: #999;
+}
+.icon-fillStar:before {
+  content: "\e90a";
+  color: #eca926;
+}
+
 .popup-content {
   background-color: white;
   padding: 20px;
