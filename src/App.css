@@ -82,7 +82,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: #555;
   overflow: auto;
 }
-
+.reviews{
+  color: reviews;
+}
 .navbar a {
   float: left;
   padding: 12px;
@@ -91,13 +93,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   font-size: 17px;
 }
 
-.navbar a:hover {
-  background-color: #000;
-  border-radius: 50px;
-}
-
 .active {
-  background-color: #04AA6D;
+  background-color: #d84aeb;
   border-radius: 50px;
 }
 

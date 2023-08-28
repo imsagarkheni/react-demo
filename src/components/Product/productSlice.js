@@ -1,9 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getProduct } from "../../redux/services/user";
+import { getProduct } from "../../redux/services/product";
 
 const initialState = {};
-
-
 
 export const getProductDetail = createAsyncThunk(
   "product/list",

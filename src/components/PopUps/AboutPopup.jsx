@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function AboutPopup({ data, handleClose }) {
-  const itemsPerPage = 5; // Number of items to show per page
+  const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
